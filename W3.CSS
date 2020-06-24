@@ -1,0 +1,702 @@
+body{
+    /* display: block; */
+    margin: 0;
+    background-color: grey;
+}
+
+* {
+    border: 1px solid blue;
+    box-sizing: border-box;
+}
+
+/* Navigation section */
+
+nav {
+    background-color: chartreuse;
+    /* margin-top: 0; */
+    display: flex;
+    position: sticky;
+    /* padding-left: 10px; */
+    z-index: 6;
+}
+
+.nav-ul {
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0px 0px;
+    /* height: 100%; */
+    align-content: center;
+    padding-left: 1vw;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: black;
+    height: auto;
+    background-color: chartreuse;
+}
+
+li {
+    height: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid red;
+}
+
+.dropbtn-nav {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+li:hover {
+    background-color: grey;
+    width: auto;
+    display: block;
+}
+
+/* Navigation Dropdown */
+
+.dropdown-content{
+    display: none;
+    list-style-type: column;
+    position: absolute;
+    z-index: 5;
+}
+
+.dropbtn {
+    list-style-type: none;
+    display: inline-flex;
+    /* padding-left: 1vw; */
+    padding-top: 2px;
+    margin-top: 0px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: black;
+    background-color: chartreuse;
+    height: 100%;
+    border: 2px solid purple;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    align-self: center;
+}
+
+.dropbtn:hover {
+    background-color: grey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+}
+
+.dropbtn:hover .dropdown-content {
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    z-index: 5;
+}
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: red;
+} */
+
+.dropdown-content a {
+    color: black;
+    /* background-color: green; */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-self: center;
+    width: auto;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 5;
+  }
+
+  .dropdown-content ul {
+        list-style-type: none;
+        display: block;
+        flex-direction: column;
+        margin: auto;
+        z-index: 5;
+  }
+
+.dropdown-content a:hover {
+      background-color: grey;
+      width: 100%;
+      margin: auto;
+  }
+
+.hamburger {
+    display: none;
+}
+
+  /* Spacer div */
+
+  .spacer {
+      background-color: darkgoldenrod;
+  }
+
+  .spacer p {
+      margin: 0;
+  }
+
+  .dropbtn {
+    list-style-type: none;
+    display: block;
+    align-self: center;
+    padding-left: 1vw;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1.5em;
+    color: black;
+    background-color: chartreuse;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content a {
+    display: block;
+    align-items: center;
+    width: auto;
+    font-size: 1.5em;
+    height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    z-index: 5;
+}
+
+.x {
+    padding-left: 0px;
+}
+
+.v {
+    width: auto;
+}
+  
+
+  /* Extra small devices (phones, 600px and down) 
+     flat menu*/
+
+ /* @media only screen and (max-width: 600px) {
+    
+    nav {
+        background-color: chartreuse;
+    
+        display: flex;
+        position: sticky;
+        
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px;
+        height: 100%;
+        align-self: center;
+        width: 100%;
+        padding-left: 0;
+    }  
+
+    li {
+        display: flex;
+        height: 100%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        font-family: monospace;
+        font-size: 1.5em;
+        color: black;
+        display: block;
+        text-align: center;
+    }
+
+    .dropbtn {
+        list-style-type: none;
+        display: block;
+        align-self: center;
+        padding-left: 1vw;
+        text-decoration: none;
+        font-family: monospace;
+        font-size: 1.5em;
+        color: black;
+        background-color: chartreuse;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown:hover .dropdown-content a {
+        display: block;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5em;
+        height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+       
+    }
+
+    .dropdown-content a:hover {
+        background-color: grey;
+    }
+}   */
+
+@media only screen and (max-width: 600px) {
+
+    nav {
+        border: 1px solid red;
+        width: 100%;
+        display: table;
+    }
+
+    .h-div {
+        /* border: 2px solid blue; */
+        display: relative;
+    }
+    
+    .fas {
+        background-color: chartreuse;
+        font-size: 1.5em;
+        /* border: 2px solid red; */
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .h-div .hamburger {
+        /* display: none; */
+        color: black;
+        background-color: chartreuse;
+        border: none;
+        float: left;
+        cursor: pointer;
+        display: block;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+        height: 100%;
+    }
+    
+    .hamburger:focus {
+        background-color: purple;
+    }
+
+    /* Nav options */
+
+    nav li  {
+        display: none;
+        /* border: 1px solid red; */
+        border-radius: 5px;
+    }
+
+    nav li:nth-child(1) {
+        border: 1px solid red;
+    }
+
+    nav li:nth-child(n+2) {
+        border-top: 0px;
+        border-bottom: 1px;
+        border-right: 1px;
+        border-left: 1px;
+        border-style: solid;
+        border-color: red;
+    }
+
+    nav .h-div:hover ul {
+        list-style-type: none;
+        background-color: chartreuse;
+        display: inline-flex;
+        flex-direction: column;
+        margin: 0px 0px;
+        height: 100%;
+        align-self: center;
+        width: 100%;
+        padding-left: 0;
+        position: relative;
+    }
+
+    nav .h-div:hover li {
+        display: flex;
+        height: 100%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        display: inline-block;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav .h-div:hover a {
+        text-decoration: none;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        font-family: monospace;
+        font-size: 1.5em;
+        color: black;
+        display: block;
+        text-align: center;
+        
+    }
+
+    .dropbtn-nav {
+        position: relative;
+        align-content: center;
+        margin: auto;
+        align-items: center;
+    }
+
+    nav .h-div:hover .dropbtn {
+        list-style-type: none;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        font-family: monospace;
+        font-size: 1.5em;
+        color: black;
+        height: 100%;
+        width: 100%;
+    }
+
+    nav .h-div:hover .dropdown {
+        display: block;
+        align-items: center;
+    }
+    
+    nav .h-div:hover .dropbtn:hover .dropdown-content {
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        display: block;
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-content {
+        position: absolute;
+        align-items: center;
+        width: 100%;
+        display: block;
+        flex-direction: column;
+    }
+}
+
+/* Slideshow of pictures */
+.slideshow{
+    display: block;
+    position: relative;
+    align-items: center;
+    z-index: 1;
+    border: 2px solid red;
+    width: auto;
+}
+
+.myslide {
+    display: block;
+    box-sizing: border-box;
+}
+
+.slide-img{
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-text {
+    display: block;
+    width: 120px;
+    left: 50%;
+    bottom: 100px;
+    margin-bottom: -100px;
+    text-align: center;
+    position: relative;
+    color: white;
+    font-family: monospace;
+    border: 2px solid red;
+    transform: translate(-50%, -50%);
+}
+
+/* Band section */
+
+.band-section {
+    background-color: white;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+.band-section-details {
+    max-width: 50%;
+    margin: auto;
+    padding: 0px 5px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border: 2px solid red;
+}
+
+.band-section-slides {
+    display: flex;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px 5px;
+}
+
+.bslides{
+    display: flex;
+    
+}
+
+.bslides-container{
+    display: inline-flex;
+    border: 2px solid chartreuse;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.band-section-slides p {
+    padding: 5px 0px 5px 0px;
+    margin: 5px;
+}
+
+.band-section-slides img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bslide-img {
+    position: table;
+    border: 2px solid red;
+    margin: 5px;
+}
+
+/* Tour section */
+
+.tour-section {
+    display: block;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    max-width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border: 2px solid red;
+    padding: 0px 5px;
+}
+
+.tour-content {
+    background-color: grey;
+    display: block;
+}
+
+.italic1 {
+    font-style: italic;
+}
+
+.tour-dates {
+    display: block;
+    margin: 0;
+    background-color: white;
+    color: black;
+    padding: 0;
+}
+
+.tour-dates-details {
+    display: block;
+    text-align: left;
+    padding: 10px;
+}
+
+.tour-dates-details:hover {
+    background-color: none;
+}
+
+.tour-dates-ul {
+    display: block;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.tour-dates-span {
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin: 5px;
+}
+
+.tour-detail-img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.tour-details {
+    display: inline-flex;
+    /* padding: 0px 5px 0px 5px; */
+}
+
+.tour-details-card {
+    display: inline-flex;
+    /* padding: 0px 5px 0px 5px; */
+    margin-top: 16px;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    column-count: 3;
+    text-align: left;
+}
+
+.tour-details-card.mid-card {
+    margin: 16px 5px 0px 5px;
+}
+
+.tour-details-card p {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tour-details-card button {
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 75%;
+    color: white;
+    background-color: black;
+}
+
+/* contact section */
+
+.contact-section {
+    background-color: white;
+    display: block;
+    font-family: monospace;
+}
+
+.contact-section p, h2 {
+    text-align: center;
+}
+
+.contact-details {
+    display: block;
+    width: 50%;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.contact-information {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-information div {
+    width: 100%;
+}
+
+.email-form{
+    margin-top: 15.210px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    color: white;
+    background-color: black;
+}
+
+.form-name {
+    min-width: 100px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+.form-message {
+    min-width: 100%;
+    padding: 5px;
+    margin: 5px 10px 5px 5px;
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+.email-div {
+    display: inline-flex;
+    box-sizing: border-box;
+}
+
+/* map section  */
+
+.map-img {
+    width: 100%;
+}
+
+div {
+    box-sizing: border-box;
+    max-height: inherit;
+}
+
+/* footer */
+
+.footer-div{
+    background-color: white;
+}
+
+.platform-icons{
+    display: block;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-div p {
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
